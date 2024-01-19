@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 // import * as React from 'react';
-import logo from "../Assets/WizWit-logos.jpeg";
+import logo from "../Assets/WizWit-logos_transparent.png";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
