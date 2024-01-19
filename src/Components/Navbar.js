@@ -20,7 +20,7 @@ const Navbar = () => {
   const handleClick = () => setClick(!click);
   const closeMenu = () => setClick(false);
 
-  const [value, setValue] = useState("one");
+  const [value, setValue] = useState("zero");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

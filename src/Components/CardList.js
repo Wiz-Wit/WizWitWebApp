@@ -6,9 +6,9 @@ import "../Stylesheets/CardList.scss";
 
 const CardList = () => {
   return (
-    <Grid className='card-list' container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+    <Grid className='card-list' container spacing={{ md: 3 }}>
         {card_info.data.map((newsItem) => (
-          <Grid item xs={2} sm={4} md={4} key={newsItem.imageUrl}>
+          <Grid item md={4} key={newsItem.imageUrl}>
             <NewsCard
                 imageUrl={newsItem.imageUrl}
                 title = {newsItem.title}

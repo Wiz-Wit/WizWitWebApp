@@ -7,7 +7,7 @@ import { CardActionArea } from '@mui/material';
 
 function NewsCard(props) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 400 }} style={{ margin: 'auto', marginTop: '10vh' }}>
       <CardActionArea>
         <CardMedia
           component="img"
