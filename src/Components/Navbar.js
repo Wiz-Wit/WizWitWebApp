@@ -48,7 +48,7 @@ const Navbar = () => {
             variant="fullWidth"
             aria-label="wrapped label tabs example"
           >
-            <Tab style={{ /*CSS*/color: "#FFB060" }} value="one" label="Games" />
+            <Tab style={{ /*CSS*/color: "#FFB060" }} value="one" label=" Games" />
             <Tab style={{ color: "#FFB060" }} value="two" label="Esports" />
             <Tab style={{ color: "#FFB060" }} value="three" label="About Us" />
           </Tabs>
