@@ -8,7 +8,7 @@ function App() {
     <div>
       {/* <Navbar/> */}
       <Signup/>
-      <Login/>
+      {/* <Login/> */}
     </div>  
   );
 }

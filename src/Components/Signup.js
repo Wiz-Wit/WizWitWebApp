@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-
 import "../Stylesheets/Signup.scss"
 
 function Signup() {
@@ -9,61 +8,75 @@ function Signup() {
     email: '',
     firstname: '',
     lastname: '',
-    password: ''
+    password: '',
+    retype: ''
   })
 
-  const { email, firstname, lastname, password } = allValues
+  const inputs = [
+    {
+      input_id: 1,
+      name: 'email',
+      type: 'text',
+      label: 'Email'
+    },
+    {
+      input_id: 2,
+      name: 'firstname',
+      type: 'text',
+      label: 'First Name',
+    },
+    {
+      input_id: 3,
+      name: 'lastname',
+      type: 'text',
+      label: 'Last Name',
+    },
+    {
+      input_id: 4,
+      name: 'password',
+      type: 'password',
+      label: 'Password',
+    },
+    {
+      input_id: 5,
+      name: 'retype',
+      type: 'password',
+      label: 'Re-type Password',
+    }
+  ]
+
+  const { email, firstname, lastname, password, retype } = allValues
 
   const onFormChange = (e) => {
     setAllValues({
-      ...allValues,
+      ...allValues, 
       [e.target.name]: e.target.value
     })
   }
   
   const handle_click = (e) => {
     console.log('you clicked sign up')
+    if (password !== retype) {
+      alert('passwords do not match, returning early')
+      return
+    }
     //call api to create new user
-    alert(`${email}, ${firstname}, ${lastname}, ${password}`)
+    alert(`calling api to create user with inputs: ${email}, ${firstname}, ${lastname}, ${password}, ${retype}`)
   }
   
   return (
     <div>
         <form className='form'>
-          <TextField 
-           name='email' 
-           id="filled-basic" 
-           label="Email" 
-           variant="filled" 
-           value={email}
-           onChange={onFormChange}
-          /><br/>
-          <TextField 
-           name='firstname' 
-           id="filled-basic" 
-           label="First Name" 
-           variant="filled"
-           value={firstname}
-           onChange={onFormChange}
-          /><br/>
-          <TextField 
-           name='lastname' 
-           id="filled-basic" 
-           label="Last Name" 
-           variant="filled" 
-           value={lastname}
-           onChange={onFormChange}
-          /><br/>
-          <TextField 
-           name='password' 
-           id="filled-basic" 
-           label="Password" 
-           variant="filled"
-           type='password'
-           value={password}
-           onChange={onFormChange}
-          /><br/>
-
+          {inputs.map(input => (
+            <TextField 
+              {...input}
+              key={input.input_id}
+              style={{'marginTop': '2.5%'}}
+              variant='filled'
+              value={allValues[input.name]} 
+              onChange={onFormChange}
+            ></TextField>
+          ))}
           <Button variant="contained" onClick={handle_click}>Sign Up</Button>
         </form>
     </div>
