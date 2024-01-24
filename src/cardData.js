@@ -7,7 +7,7 @@ exports.data = [
     },
     {
         imageUrl : 'https://m.media-amazon.com/images/I/81XWfzzdgkL._AC_UF894,1000_QL80_.jpg',
-        title: 'Digimon',
+        title: 'Resistance',
         description: 'Digimon released a brand new exciting update'
     },
     {

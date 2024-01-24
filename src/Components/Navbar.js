@@ -1,5 +1,4 @@
 import { React, useState } from "react";
-// import * as React from 'react';
 import logo from "../Assets/WizWit-logos.jpeg";
 
 import MenuIcon from "@mui/icons-material/Menu";
@@ -9,9 +8,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from '@mui/material/Box'
 import { ThemeProvider } from '@mui/material';
-
 import NavTheme from "../Stylesheets/TabsTheme";
-
 import "../Stylesheets/Navbar.scss";
 
 const Navbar = () => {
@@ -46,7 +43,7 @@ const Navbar = () => {
             value={value}
             onChange={handleChange}
             variant="fullWidth"
-            aria-label="wrapped label tabs example"
+            aria-label="wrapped label tabs example" 
           >
             <Tab style={{ /*CSS*/color: "#FFB060" }} value="one" label="Games" />
             <Tab style={{ color: "#FFB060" }} value="two" label="Esports" />
