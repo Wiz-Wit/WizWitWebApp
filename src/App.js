@@ -6,9 +6,7 @@ import Login from './Components/Login';
 function App() {
   return (   
     <div>
-      {/* <Navbar/> */}
-      <Signup/>
-      {/* <Login/> */}
+      <Navbar/>
     </div>  
   );
 }
