@@ -1,5 +1,6 @@
 //import statements
 import { React, useState } from "react";
+
 // import * as React from 'react';
 // Components
 import AppBar from "@mui/material/AppBar";
@@ -34,6 +35,7 @@ const Navbar = () => {
 
 // Tabs
   const [value, setValue] = useState("zero");
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
