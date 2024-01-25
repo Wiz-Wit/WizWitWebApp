@@ -1,24 +1,25 @@
-import * as React from 'react';
-import Navbar from './Components/Navbar';
-import { ThemeProvider } from '@mui/material';
-import NavTheme from './Stylesheets/TabsTheme';
+import React from 'react'
+import Navbar from './Components/Navbar'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import CardList  from './Components/CardList';
 import MuiCarousel from './Components/Carousel'
-//import Carousel from './Components/bsCarousel';
 import Signup from './Components/Signup';
 import Login from './Components/Login';
-
-
-function App() {
-  return (   
-    <div>
+const App = () => {
+  return (
+    <BrowserRouter>
       <Navbar/>
-      {/* <Carousel /> */}
       <MuiCarousel />
-      <CardList></CardList>
-      
-     </div>
-  );
+      <CardList/>
+      <Routes>
+        <Route exact path='/'></Route>
+        <Route path='/Registration'><Signup/></Route>
+        <Route path='/SignIn'><Login/></Route>
+        <Route path='/Settings'></Route>
+        <Route path='/Account'></Route>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
