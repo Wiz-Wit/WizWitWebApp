@@ -4,7 +4,7 @@ const NavTheme = createTheme({
         palette: {
           primary: {
             main: '#ffffff',
-            textColor: '#fab217',
+            textColor: '#15e2e6',
             background: '#000000',
             white: '#ffffff'
           },

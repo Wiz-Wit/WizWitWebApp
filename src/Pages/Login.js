@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import { useState } from 'react';
 
 import "../Stylesheets/Login.scss"
+import Navbar from '../Components/Navbar';
 
 function Login() {
   const [email, setEmail] = useState('')

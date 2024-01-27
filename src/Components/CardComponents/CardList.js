@@ -1,8 +1,8 @@
 import React from 'react'
 import NewsCard from './Card'
-import card_info from './../cardData'
+import card_info from './cardData'
 import Grid from '@mui/material/Grid';
-import "../Stylesheets/CardList.scss";
+import "../../Stylesheets/CardList.scss";
 
 const CardList = () => {
   return (

@@ -27,6 +27,8 @@ import NotLoggedInStackButtons from './NavComponents/GuestNav/NotLoggedInStackBu
 // Member account icon / button 
 import LoggedInStackbuttons from "./NavComponents/MemberNav/LoggedInStackButtons";
 
+const noDisplay = "none";
+const showDisplay = "";
 const Navbar = () => {
   const [click, setClick] = useState(false);
 
@@ -38,6 +40,8 @@ const Navbar = () => {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+
+
   };
 
   return (
@@ -67,8 +71,8 @@ const Navbar = () => {
             </Box>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "inline" } }} />
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "inline" } }}>
-              <NotLoggedInStackButtons display=""/>
-              <LoggedInStackbuttons display=""/>
+              <NotLoggedInStackButtons display={showDisplay}/>
+              <LoggedInStackbuttons display={showDisplay}/>
             </Box>
           </Toolbar>
         </AppBar>
