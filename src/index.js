@@ -9,6 +9,7 @@ import Login from './Pages/Login';
 // import routing
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import  Navbar  from './Components/Navbar';
+import Settings from './Pages/Settings';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Settings",
-    element: "",
+    element: <Settings />,
   },
   {
     path: "/Account",
