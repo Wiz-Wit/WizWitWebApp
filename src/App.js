@@ -5,10 +5,14 @@ import CardList  from './Components/CardComponents/CardList';
 import BsCarousel from './Components/bsCarousel';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
+import './index.css';
+import MainCard from './Components/CardComponents/MainCard';
+
 const App = () => {
   return (
-    <div>
-        <BsCarousel/>
+    <div style={{background: ""}}>
+         <BsCarousel/>
+         <MainCard />
         <CardList/>
     </div>
       
